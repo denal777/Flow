@@ -1,0 +1,99 @@
+body {
+	font: 14px/16px sans-serif;
+}
+input {
+	margin: 8px 0;
+	border-radius: 4px;
+}
+textarea {
+	border-radius: 4px;
+	width: 100%;
+	resize: none;
+}
+hr {
+	border: none;
+    color: #e0e0e0;
+    background-color: #e0e0e0;
+    height: 1px;
+}
+.full {
+	margin: 0;
+	padding: 0;
+}
+#Form_block {
+	width: 80%;
+	margin: 10px auto;
+	border: 1px solid #e0e0e0;
+	border-radius: 5px;
+}
+#Title_block {
+	background: linear-gradient(to top, #efeeee, #FFF);
+	height: 50px;
+	line-height: 40px;
+}
+#rectangle {
+	float:left;
+	margin: 14px 5px 13px 0;
+	width: 6px;
+	height: 20px;
+	background: #ba2745;
+}
+#Caption {
+	position: relative;
+	top: 6px;
+	font: 20px/22px sans-serif;
+}
+#Info_block {
+	background: #efeeee;
+	padding: 15px;
+}
+#RUS {
+	margin: 0 0 0 130px;
+}
+#FOR {
+	margin: 0 0 0 147px;
+}
+#Input_block {
+	background: #f6f6f6;
+	padding: 15px;
+}
+#Doc_list {
+	width: 100%;
+	border-radius: 4px 10px 10px 4px;
+	border: 1px solid #bbbcbd;
+}
+#Surname, #Name, #MiddleName {
+	width: 50%;
+}
+#Surname, #Name, #SER, #NUM, #PLACE, #DATE {
+	background: url(images/znak.png) no-repeat 98% center;
+}
+#SER, #NUM {
+	width: 70px;
+}
+#PLACE {
+	width: 60%; 
+}
+#DATE {
+	width: 150px;
+	border-radius: 4px 10px 10px 4px;
+}
+#Button_block {
+	background: #efeeee;
+	padding: 6px 0 6px 0;
+}
+#Submit {
+	color: #454545;
+	margin: 0px auto;
+	display: block;
+	background: linear-gradient(to top, #EEE, #FFF);
+	cursor:pointer;
+	border-radius: 5px;
+	padding: 4px 15px;
+	border: 2px solid #dbdbdb;
+	font-weight: 600; 
+	line-height: 1.5;
+}
+#Submit:hover {
+	border: 2px solid #AAA;
+}
