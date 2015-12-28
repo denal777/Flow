@@ -1,9 +1,10 @@
 body {
 	font: 14px/16px sans-serif;
 }
-input {
-	margin: 8px 0;
+input:not([type="radio"]) {
+	margin: 5px 0;
 	border-radius: 4px;
+	height: 25px;
 }
 textarea {
 	border-radius: 4px;
@@ -20,16 +21,48 @@ hr {
 	margin: 0;
 	padding: 0;
 }
-#Form_block {
+.Rght_almnt_text {
+	float:right;
+	margin: 4px 0;
+	color: #b0b0b0;
+	font-style: italic;
+	font-size: 11px;
+}
+.Info_block {
+	background: #efeeee;
+	padding: 15px;
+}
+.Radio_block {
+	float: left;
+	width: 350px;
+}
+.Num {
+	width: 70px;
+}
+.Form_block {
 	width: 80%;
 	margin: 10px auto;
 	border: 1px solid #e0e0e0;
 	border-radius: 5px;
 }
-#Title_block {
+.Title_block {
 	background: linear-gradient(to top, #efeeee, #FFF);
 	height: 50px;
 	line-height: 40px;
+}
+.Input_block {
+	background: #f6f6f6;
+	padding: 15px;
+}
+.Doc_list {
+	width: 100%;
+	border-radius: 4px 10px 10px 4px;
+	border: 1px solid #bbbcbd;
+	height: 25px;
+	margin: 5px 0;
+}
+.Names {
+	width: 50%;
 }
 #rectangle {
 	float:left;
@@ -43,33 +76,8 @@ hr {
 	top: 6px;
 	font: 20px/22px sans-serif;
 }
-#Info_block {
-	background: #efeeee;
-	padding: 15px;
-}
-#RUS {
-	margin: 0 0 0 130px;
-}
-#FOR {
-	margin: 0 0 0 147px;
-}
-#Input_block {
-	background: #f6f6f6;
-	padding: 15px;
-}
-#Doc_list {
-	width: 100%;
-	border-radius: 4px 10px 10px 4px;
-	border: 1px solid #bbbcbd;
-}
-#Surname, #Name, #MiddleName {
-	width: 50%;
-}
-#Surname, #Name, #SER, #NUM, #PLACE, #DATE {
+.Req {
 	background: #FFF url(images/znak.png) no-repeat 98% center;
-}
-#SER, #NUM {
-	width: 70px;
 }
 #PLACE {
 	width: 60%; 
@@ -78,7 +86,7 @@ hr {
 	width: 150px;
 	border-radius: 4px 10px 10px 4px;
 }
-#Button_block {
+.Button_block {
 	background: #efeeee;
 	padding: 6px 0 6px 0;
 }
@@ -96,4 +104,19 @@ hr {
 }
 #Submit:hover {
 	border: 2px solid #AAA;
+}
+::-webkit-input-placeholder {
+   font-style: italic;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   font-style: italic; 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   font-style: italic;  
+}
+
+:-ms-input-placeholder {  
+   font-style: italic;  
 }

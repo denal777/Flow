@@ -6,48 +6,62 @@
 		<link rel="stylesheet" type="text/css" href="styles/style.css">
 	</head>
 	<body>
-		<div id="Form_block">
+		<div id="Form_block" class="Form_block">
 			<form name="Quary"> 
-				<div id="Title_block">
+				<div id="Title_block" class="Title_block">
 					<div id="rectangle"></div>
 					<span id="Caption">Запрос по правообладателю</span>
 				</div>
 				<hr class="full">
-				<div id="Info_block">
+				<div id="Info_block" class="Info_block">
 					<label id="Info_tit" for="Info_type"><b>Я хочу получить сведения о правах:</b></label><br>
-					<input type="radio" name="Info_type" id="SNILS" value="SNILS" tabindex="10">
-					<label for="SNILS">Физического лица по СНИЛС</label>
-					<input type="radio" name="Info_type" id="RUS" value="RUS" tabindex="40">
-					<label for="RUS">Российского юридического лица</label><br>
-					<input type="radio" name="Info_type" id="FIO" value="FIO" tabindex="20">
-					<label for="FIO">Физического лица по ФИО</label>
-					<input type="radio" name="Info_type" id="FOR" value="FOR" tabindex="50">
-					<label for="FOR">Иностранного юридического лица</label><br>
-					<input type="radio" name="Info_type" id="PUB" value="PUB" tabindex="30">
-					<label for="PUB">Субьекта публичного права</label><br>
+					<div id="Radio1" class="Radio_block">
+						<input type="radio" name="Info_type" id="SNILS" value="SNILS" tabindex="10">
+						<label for="SNILS">Физического лица по СНИЛС</label>
+					</div>
+					<div id="Radio3" class="Radio_block">
+						<input type="radio" name="Info_type" id="RUS" value="RUS" tabindex="40">
+						<label for="RUS">Российского юридического лица</label>
+					</div>
+					<br>
+					<div id="Radio2" class="Radio_block">
+						<input type="radio" name="Info_type" id="FIO" value="FIO" tabindex="20">
+						<label for="FIO">Физического лица по ФИО</label>
+					</div>
+					<div id="Radio4" class="Radio_block">
+						<input type="radio" name="Info_type" id="FOR" value="FOR" tabindex="50">
+						<label for="FOR">Иностранного юридического лица</label>
+					</div>
+					<br>
+					<div id="Radio5" class="Radio_block">
+						<input type="radio" name="Info_type" id="PUB" value="PUB" tabindex="30">
+						<label for="PUB">Субьекта публичного права</label>
+					</div>
+					<br>
 				</div>
 				<hr class="full">
-				<div id="Input_block">
-					<input required class="REQ" type="text" name="Surname" id="Surname" placeholder="Фамилия" maxlength="20" tabindex="60" pattern="([А-ЯЁ][а-яё]+[\-\s]?)"><br>
-					<input required class="REQ" type="text" name="Name" id="Name" placeholder="Имя" maxlength="20" tabindex="70" pattern="([А-ЯЁ][а-яё]+[\-\s]?)"><br>
-					<input type="text" name="MiddleName" id="MiddleName" placeholder="Отчество" maxlength="20" tabindex="80" pattern="([А-ЯЁ][а-яё]+[\-\s]?)">
-					<label id="MN_label" for="MiddleName">Отчество необходимо указывать, если оно есть в документе, удостоверяющем личность</label><br>			
+				<div id="Input_block" class="Input_block">
+					<input required class="Names Req" type="text" name="Surname" id="Surname" placeholder="Фамилия" maxlength="20" tabindex="60" pattern="([А-ЯЁ][а-яё]+[\-\s]?)"><br>
+					<input required class="Names Req" type="text" name="Name" id="Name" placeholder="Имя" maxlength="20" tabindex="70" pattern="([А-ЯЁ][а-яё]+[\-\s]?)"><br>
+					<input type="text" class="Names" name="MiddleName" id="MiddleName" placeholder="Отчество" maxlength="20" tabindex="80" pattern="([А-ЯЁ][а-яё]+[\-\s]?)">
+					<label id="MN_label" class="Rght_almnt_text" for="MiddleName">Отчество необходимо указывать, если оно есть в документе,<br>удостоверяющем личность</label>
+					<br>			
 					<hr>
-					<select required id="Doc_list" tabindex="90" size="1">
+					<select required id="Doc_list" class="Doc_list" tabindex="90" size="1">
 		  				<option>Паспорт гражданина Российской Федерации</option>
 		  				<option>Заграничный паспорт</option>
 		  				<option>Водительское удостоверение</option>
 					</select><br>
-					<input required class="REQ" type="text" name="SER" id="SER" placeholder="Серия" maxlength="20" tabindex="100">
-					<input required class="REQ" type="text" name="NUM" id="NUM" placeholder="Номер" maxlength="20" tabindex="110">
-					<input required class="REQ" type="text" name="PLACE" id="PLACE" placeholder="Кем выдан документ, удостоверяющий личность" tabindex="120"><br>
-					<input required class="REQ" type="date" name="DATE" id="DATE" placeholder="Дата выдачи"maxlength="10" tabindex="130"><br>
+					<input required type="text" name="SER" id="SER" class="Num Req" placeholder="Серия" maxlength="20" tabindex="100">
+					<input required type="text" name="NUM" id="NUM" class="Num Req" placeholder="Номер" maxlength="20" tabindex="110">
+					<input required class="PLACE Req" type="text" name="PLACE" id="PLACE" placeholder="Кем выдан документ, удостоверяющий личность" tabindex="120"><br>
+					<input required class="DATE Req" type="date" name="DATE" id="DATE" placeholder="Дата выдачи"maxlength="10" tabindex="130"><br>
 					<hr>		
 					<textarea name="Reason" rows="10" wrap="soft" tabindex="140" placeholder="Основание запроса сведений"></textarea><br><br>	
 				</div>
 				<hr class="full">
-				<div id="Button_block">		
-					<input type="submit" name="Submit" id="Submit" value="Отправить запрос"> 
+				<div id="Button_block" class="Button_block">		
+					<input type="submit" class="Submit" name="Submit" id="Submit" value="Отправить запрос"> 
 				</div>
 			</form>
 		</div>
